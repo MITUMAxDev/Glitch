@@ -1,7 +1,7 @@
-local PlaceId = tostring(game.PlaceId)
+local PlaceId = game.PlaceId
 
-if PlaceId == "8540168650" then
-  print("Stand Upright Rebooted")
+if PlaceId == 8540168650 then
+    print("Stand Upright Rebooted")
 else
-  warn("MAP NOT SUPPORTED")
+    warn("MAP NOT SUPPORTED")
 end
