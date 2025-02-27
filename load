@@ -1,7 +1,7 @@
 local PlaceId = game.PlaceId
 
 if PlaceId == 8540168650 then
-    print("Stand Upright Rebooted")
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MITUMAxDev/Glitch/refs/heads/main/loads/SUR.lua"))()
 else
     warn("MAP NOT SUPPORTED")
 end
