@@ -3,5 +3,5 @@ local PlaceId = game.PlaceId
 if PlaceId == "8540168650" then
   print("Stand Upright Rebooted")
 else
-  game:GetService("Players").LocalPlayer:Shutdown("Nigger")
+  warn("MAP NOT SUPPORTED")
 end
