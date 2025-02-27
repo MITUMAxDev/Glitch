@@ -1,4 +1,4 @@
-local PlaceId = game.PlaceId
+local PlaceId = tostring(game.PlaceId)
 
 if PlaceId == "8540168650" then
   print("Stand Upright Rebooted")
