@@ -1,3 +1,4 @@
+repeat task.wait() until game:IsLoaded()
 local PlaceId = game.PlaceId
 
 if PlaceId == 8540168650 then
@@ -5,3 +6,18 @@ if PlaceId == 8540168650 then
 else
     warn("MAP NOT SUPPORTED")
 end
+
+--Auto Reexecute
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+LocalPlayer.OnTeleport:Connect(function(state)
+    if state == Enum.TeleportState.InProgress then
+
+        queue_on_teleport([[
+            wait(game:IsLoaded() and 0 or game.Loaded:Wait()) 
+            loadstring(game:HttpGet("https://mitumaxdev.github.io/Glitch/load")()
+        ]])
+
+    end
+end)
