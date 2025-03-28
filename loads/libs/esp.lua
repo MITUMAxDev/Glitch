@@ -52,7 +52,7 @@ local function applyESP(obj, espSettings)
 		hl.Enabled = not not espLib.ESPValues[espSettings.ESPName]
 	end
 
-	-- Billboard GUI for Name
+	-- Billboard GUI for Name and Dot
 	local bg = Instance.new("BillboardGui", ESPFolder)
 	bg.Adornee = obj
 	bg.AlwaysOnTop = true
@@ -60,9 +60,23 @@ local function applyESP(obj, espSettings)
 	bg.MaxDistance = 100
 	bg.Enabled = not not espLib.ESPValues[espSettings.ESPName]
 
+	-- Small dot
+	local dot = Instance.new("Frame", bg)
+	dot.Size = UDim2.fromOffset(4, 4)  -- Much smaller dot
+	dot.Position = UDim2.fromScale(0.5, 0)
+	dot.AnchorPoint = Vector2.new(0.5, 0.5)
+	dot.BackgroundColor3 = espSettings.Color
+	dot.BorderSizePixel = 0
+
+	local corner = Instance.new("UICorner", dot)
+	corner.CornerRadius = UDim.new(1, 0)  -- Perfectly round
+
+	-- Name Label
 	local label = Instance.new("TextLabel", bg)
 	label.BackgroundTransparency = 1
-	label.Size = UDim2.fromScale(1, 1)
+	label.Size = UDim2.new(1, 0, 1, -10)  -- Adjusted to make room for dot
+	label.Position = UDim2.new(0, 0, 1, 0)
+	label.AnchorPoint = Vector2.new(0, 1)
 	label.Font = Enum.Font.GothamBold
 	label.TextColor3 = espSettings.Color
 	label.Text = espSettings.Text
