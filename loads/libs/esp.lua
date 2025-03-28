@@ -59,7 +59,7 @@ local function applyESP(obj, espSettings)
 		hl.OutlineColor = col
 		hl.FillColor = col
 		hl.FillTransparency = 0.8
-		hl.OutlineTransparency = 0.5
+		hl.OutlineTransparency = 0.8
 		hl.Enabled = not not espLib.ESPValues[espSettings.ESPName]
 
 		if not espSettings.HighlightEnabled then
@@ -87,7 +87,7 @@ local function applyESP(obj, espSettings)
 		gradient.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.new(1,1,1)), ColorSequenceKeypoint.new(1, Color3.new(0.5, 0.5, 0.5))})
 
 		local stroke = circle:FindFirstChild("UIStroke") or Instance.new("UIStroke", circle)
-		stroke.Thickness = 2.5
+		stroke.Thickness = 0.5
 
 		local label = bg:FindFirstChild("TextLabel") or Instance.new("TextLabel", bg)
 		label.TextStrokeTransparency = 1
