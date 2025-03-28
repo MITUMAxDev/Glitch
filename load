@@ -3,6 +3,8 @@ local PlaceId = game.PlaceId
 
 if PlaceId == 8540168650 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/MITUMAxDev/Glitch/refs/heads/main/loads/SUR.lua"))()
+elseif PlaceId == 70876832253163 or PlaceId == 116495829188952 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/MITUMAxDev/Glitch/refs/heads/main/loads/DR.lua"))()
 else
     warn("MAP NOT SUPPORTED")
 end
