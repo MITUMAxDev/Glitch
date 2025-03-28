@@ -101,7 +101,7 @@ local function applyESP(obj, espSettings)
 		label.AnchorPoint = Vector2.new(0, 0.5)
 
 		local stroke = label:FindFirstChild("UIStroke") or Instance.new("UIStroke", label)
-		stroke.Thickness = 2.5
+		stroke.Thickness = 1
 	end
 
 	deapplyESP()
@@ -174,7 +174,7 @@ function deapplyESP(obj)
 		if v then
 			v:Disconnect()
 		end
-	end
+	end 
 
 	if obj:FindFirstChild("ESPFolder") then
 		obj.ESPFolder:Destroy()
